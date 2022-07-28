@@ -1,0 +1,620 @@
+/*Variables*/
+
+/*Reseteo*/
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+a{color: black;}
+a:hover{ color: rgb(245, 56, 132);}
+/*Estilos Base*/
+body{
+    overflow-x: hidden; /*ocultar textos que sobresale*/
+    font-family: 'Mulish', sans-serif;
+}
+.button{
+    background-color:rgb(245, 56, 132);
+    border: 2px solid rgb(245, 56, 132);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+    display: inline-block;
+}
+.button:hover{
+    background-color: rgb(245, 7, 102); /*color de boton */
+}
+input,textarea{
+    background: rgba(255,255, 255, 0.05);
+    padding: 10px 10px;
+    border-radius: 10px;  /*no esta cambiando*/
+    border: 2px solid rgb(245, 56, 132);
+}
+
+
+h1 {font-size: 1.2em;}
+h2, h3, h4 {font-size: 1em;}
+
+.sombras{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.lectura{font-size: 0.9em; }
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+}
+/*----------------------*/
+nav .contenedor{
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    /*justify-items: center;
+    align-items: center;*/
+}
+
+nav img{
+    width: 180px;
+
+}
+nav .logo{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+nav ul{
+    display: none; /*oculto en movil*/
+    grid-column: 2/9;
+    grid-row: 1;
+    
+}
+
+nav .Menu_Movil{
+    grid-column: 8;
+    grid-row: 1;
+    align-self: center;
+    
+    width: 32px;
+ }
+
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    text-align:center ;
+    height: 60vh; /*cambia el 90% de la pantalla*/
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../img/terapia.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#banner h1{
+    color: white;
+}
+
+#holistica .contenedor .datos{
+    
+    grid-column: 1/9;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+#holistica .holistica_img{
+    display:none;
+}
+
+/*plan estratégico*/
+#estrategicos .contenedor{
+    display: grid;
+    grid-template-columns: 1fr; 
+    margin-top: 20px;
+    padding: 10px;
+}
+
+#estrategicos .tarjetas{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+   
+
+}
+#estrategicos .cuadro{
+    background-color: rgb(226, 226, 226); /*color de cada cuadro*/
+    padding: 10px;
+}
+/*valores*/
+#valores .contenedor{
+    display: grid;
+    grid-template-columns: 1fr; 
+    margin-top: 20px;
+    padding: 10px;
+}
+
+#valores .cuadros{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px; /*espacios en los grid*/
+    
+}
+
+#valores .caja{
+    background-color: rgb(226, 226, 226);
+    padding: 10px;
+    text-align: center;
+}
+
+footer .contenedor{
+    display: grid;
+    grid-template-columns: 1fr; 
+    margin-top: 20px;
+    background: rgb(61, 61, 61);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    
+}
+footer ul{
+   display: grid;
+   grid-template-columns: 1fr 4px 1fr 4px;
+   padding: 5px;
+    
+}
+
+footer li:nth-last-child(1){ /*El ultimo de la grilla*/
+    grid-column: 1/5;
+    grid-row: 2;
+}
+
+footer a{
+    color: white;
+}
+
+
+#whatsapp{
+    display:inline-block;
+    position: fixed ;
+    bottom: 55px;
+    right: 5px;
+    width: 45px;
+}
+#whatsapp img{
+    width: 100%;
+}
+
+#contactos .contenedor{
+    text-align: center;
+    padding: 20px 20px;
+}
+#contactos h3{
+    margin-bottom: 20px;
+    
+}
+#contactos form{
+    width: 80%;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+.cuadros > div {
+    margin-bottom: 20px;
+}
+
+#contactos input, 
+#contactos textarea{
+    width: 100%;
+    margin: 10px 0;
+}
+
+.nosotros_contenedor{
+    margin-top: 20px;
+    padding: 10px;
+}
+.nosotros_contenedor h3{
+    grid-column: 1/9;
+}
+.nosotros_contenedor p{
+    grid-column: 1/9;
+    margin-bottom: 1em;
+}
+
+.transmision_contenedor{
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.transmitir_texto{
+    grid-column: 1/9;
+}
+.transmitir_video{
+    grid-column: 1/9;
+    margin-top: 20px;
+    height: 35vh;
+}
+iframe{
+    width: 100%;
+    height: 100%;/*40vh*/
+    overflow: hidden;
+}
+
+.transmitir_boton{
+    grid-column: 1/9;
+    text-align:end ;
+    margin-top: 15px;
+}
+
+#programas .contenedor{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+    padding: 10px;
+
+}
+#programas .contenedor_cars{
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+#programas .cards{
+    
+   /* margin-top: 20px;*/
+    padding: 10px;
+    
+    
+}
+#programas .programas_datos{
+    margin-bottom: 20px;
+}
+
+#programas .contenedor_cars img{
+    height: 30vh;
+    width: 100%;
+}
+
+#programas .cars_button{
+    padding: 10px 0px;
+    text-align:end ;
+}
+#sesiones .contenedor{
+    margin: 20px 0px;
+    padding: 10px;
+
+}
+.grilla{
+    display: grid;
+    grid-template-columns: auto;
+    grid-row: auto;
+     grid-template-areas: "f1 "
+                          "f2"
+                          "f3"
+                          "f4"
+                          "f5"
+                          "f6"
+                          "f7";
+
+}
+
+#sesiones .sesioness{
+    gap: 10px;
+    
+}
+
+/*galeria*/
+
+#sesiones img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.galeria_foto{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+.galeria_foto::before{
+    content:"ver";
+    position:absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: #f34099a6;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(100%);
+    transition: transform .4s ;
+}
+.galeria_foto:hover::before{
+    transform: translate(0);
+}
+
+/*blog*/
+.contenedor_blog{
+    grid-column: 1/9;
+    margin: 10px;
+}
+
+.contendor_aside{
+    grid-column: 1/9;
+    grid-row: 2;
+    margin: 10px;
+}
+.blog_imagen{
+    width: 100%;
+}
+main .blog{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+article{
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.blog_button {
+    text-align: right;
+    margin: 10px ;
+}
+.contendor_aside{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.aside_form{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.aside_button{
+    text-align: center;
+    padding: 10px;
+}
+.blog_listado li{
+    
+    padding: 5px;
+    border: 1px solid rgb(228, 225, 225);
+}
+
+#mapa .lugar {
+    width: 100%;
+    height: 40vh;
+    border: 1px solid rgb(197, 197, 197);
+    
+}
+
+
+
+/*Estilo movil*/
+
+/*Estilo de tablets pequeñas*/
+@media screen and (min-width: 620px){
+    footer ul{
+        grid-template-columns: 1fr 4px 1fr 4px 1fr;
+     }
+    footer li:nth-last-child(1){ /*El ultimo de la grilla*/
+        grid-column: 5;
+        grid-row: 1;
+    }
+    #holistica .contenedor .datos{
+    
+        grid-column: 1/6;
+        margin-top: 20px;
+        padding: 5px;
+
+    }
+    
+    #holistica .holistica_img{
+        display:inline-block;
+        grid-column: 6/9;
+        align-self: center;
+        margin: 10px;
+    }
+    #holistica .holistica_img img{
+        width: 100%;
+      }
+    
+    #estrategicos .tarjetas{
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+    #valores .cuadros{
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px; /*espacios en los grid*/
+        
+    }
+    .transmitir_video{
+        height: 50vh;
+    }
+    #programas .contenedor_cars{
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    .contenedor_blog {
+        grid-column: 1/6 ;
+        grid-row: 1;
+    }
+    .contendor_aside{
+        grid-column: 6/9 ;
+        grid-row: 1;
+    }
+    #contactos .cuadros{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    }
+    #contactos .cuadros div:nth-last-child(1){ /*El ultimo de la grilla*/
+        grid-column: 1/3;
+        grid-row: 2;
+    }
+    .grilla{
+       grid-template-columns: auto auto;
+        grid-template-areas: "f1 f2"
+                             "f3 f2"
+                             "f3 f6"
+                             "f7 f8";
+    
+    }
+    .foto4{
+        grid-area: f2;
+    
+    }
+    .foto5{
+        grid-area: f3;
+    
+    }
+    
+    
+    
+} 
+
+/*tables largas y laptop*/
+@media screen and (min-width: 960px){
+    
+    #valores .cuadros{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px; /*espacios en los grid*/
+        
+    }
+    nav .Menu_Movil{
+        display: none;
+    }
+    nav ul{
+        display:flex;
+        flex-direction: row;
+    }
+    
+    nav ul li{
+        padding: 10px 10px;
+    }
+    nav .contenedor{
+        justify-items: flex-end;
+    }
+    footer ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+    }
+    footer ul li{
+        padding: 10px;
+    }
+    .transmitir_video{
+        height: 60vh;
+    }
+    #programas .contenedor_cars img{
+        height: 40vh;
+    }
+    .contendor_aside{
+        margin-left: 10%;
+    }
+    #contactos .cuadros{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+    #contactos .cuadros div:nth-last-child(1){
+        grid-column: 3;
+        grid-row: 1;
+    }
+    .grilla{
+        grid-template-columns: auto auto;
+        grid-template-areas: "f1 f2 f3"
+                              "f4 f2 f3"
+                              "f5 f6 f7"
+                              "f5 f8 f9"
+                              "f10 f12 f13";
+     
+     }
+     .foto4{
+         grid-area: f2;
+     
+     }
+     .foto5{
+         grid-area: f3;
+     
+     }
+     .foto7{
+        grid-area: f5;
+    
+    }
+    
+}
+
+/*Estilos para destop*/
+@media screen and (min-width: 1200px){
+    .contenedor{
+            max-width: 1200px; /*1400 para diseño programa de diseño*/
+            margin: auto;
+            
+    }  
+    .nosotros_contenedor{
+        max-width: 1200px; /*1400 para diseño programa de diseño*/
+        margin: auto;
+    }    
+    .transmision_contenedor{
+        max-width: 1200px; /*1400 para diseño programa de diseño*/
+        margin: auto;
+    }
+    .transmitir_video{
+        height: 70vh;
+    }
+    #programas .contenedor_cars{
+        gap: 30px;
+    }
+    .contendor_aside{
+        margin-left: 15%;
+    }
+    #sesiones{
+        max-width: 1200px; /*1400 para diseño programa de diseño*/
+        margin: auto;
+    }
+    .grilla{
+        grid-template-columns: auto auto;
+        grid-template-areas: "f1 f2 f3 f4"
+                             "f5 f2 f3 f8"
+                             "f5 f10 f11 f12"
+                            ;
+     
+     }
+     .foto4{
+        grid-area: f2;
+    
+    }
+    .foto5{
+        grid-area: f3;
+    
+    }
+    .foto7{
+        grid-area: f5;
+    
+    }
+    .foto3{
+        grid-area: f4;
+    
+    }
+    /*#sesiones .sesioness div{
+        grid-column: span 3;
+      
+     }*/
+     
+     
+
+
+}
+
